@@ -1,11 +1,13 @@
 <html>
-    <head>
-        <title>Raven Tracks</title>
-        <style type="text/css" xml:space="preserve">
+  <head>
+    <title>Raven Tracks</title>
+    <style type="text/css" xml:space="preserve">
 body       { background-color: whitesmoke;
              font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
 div.links   { display: flex; gap: 1em; justify-content: center; max-width: 60%; margin: 0em auto }
-div.links p { width: fit-content; padding: 0.2em; background-color: ivory; border: thin solid black; text-align: center }
+div.links p { width: fit-content; padding: 0.2em; background-color: silver; outline: medium solid grey; text-align: center }
+div.links p:hover { outline: medium solid black; background: whitesmoke }
+h4:first-child { margin: 0em }
 section    { margin-top: 1em }
 main       { margin: 0vh auto; max-width: 48em }
 #logo      { margin: 0vh 5vw }
@@ -18,56 +20,78 @@ footer     { border-top: thin solid black;
 footer p, footer h4 { margin: 0em }
 details { padding: 0.8em; background-color: gainsboro; border: thin inset black }
 details summary { font-size: 120%; font-weight: bold }</style>
-      <link rel="icon" href="site/tracks-icon.svg" type="image/svg+xml">
-    </head>
-    <body>
-        <img class="float" id="logo" alt="raven tracks" src="site/tracks.svg" />
-        <h1>Raven Tracks</h1>
-        <h2>Experiments in Media</h2>
-        <main>
-          <details open="open"><summary>Life of Demonax (Lucian of Samosata, Second Century CE)</summary>
-            <div class="links">
-              <p><a href="Demonax/Demonax_scholia-EDITIO.html">Scholia&#xA0;2026 Reader</a></p>
-              <p><a href="Demonax/Life-of-Demonax.pdf">PDF English translation</a> </p>
-              <p><a href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/">Scaife&#xA0;Reader</a> (Perseus)</p>
-            </div>            
-            <blockquote>
-                <p>στάσεως δέ ποτε Ἀθήνησι γενομένης εἰσῆλθεν εἰς τὴν ἐκκλησίαν καὶ φανεὶς μόνον
-                    σιωπᾶν ἐποίησεν αὐτούς· ὁ δὲ ἰδὼν ἤδη μετεγνωκότας οὐδὲν εἰπὼν καὶ αὐτὸς
-                    ἀπηλλάγη.</p>
-                <p>Once when the Athenians had collapsed into political discord, he went to the
-                    assembly and just by appearing, brought them to silence. When he saw they had
-                    relented, he excused himself without a word. </p>
-                <p style="text-align: right">(Lucian, <b>Life of Demonax</b>)</p>
-            </blockquote>
-            <ul>
-              <li><a href="Demonax/Demonax_scholia-EDITIO.html">Scholia 2026 Reader</a> - experimental design of a dynamic reading interface for intermediate-level students of Ancient Greek. The technology stack is based on TEI XML to support structured authoring and editing of text, translation and glosses. The approach works with any languages supported by Unicode.</li>
-              <li><a href="Demonax/Life-of-Demonax.pdf">A PDF version</a> of the developers' English translation (only) is laid out for the page.</li>
-          <li>Not on this site, the <a href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/">Scaife Reader</a> interface to the Perseus text of <i>Demonax</i> may represent the state of the art in graded readers.</li>
-            </ul>
-            <p>The translation and notes are by the developer, and any errors are mine. I also contributed the sectioning and section titles. Especially if you have corrections or suggestions for improvement, please provide feedback in the <a href="https://github.com/wendellpiez/raventracks">site repository</a>.</p>            
-          </details>
+    <link rel="icon" href="site/tracks-icon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <img class="float" id="logo" alt="raven tracks" src="site/tracks.svg" />
+    <h1>Raven Tracks</h1>
+    <h2>Experiments in Media</h2>
+    <main>
+      <details open="open">
+        <summary>Life of Demonax (Lucian of Samosata, Second Century CE)</summary>
+        <div class="links">
+          <p>
+            <a href="Demonax/Demonax_scholia-EDITIO.html">Scholia&#xA0;2026 Reader</a>
+          </p>
+          <p>
+            <a href="Demonax/Life-of-Demonax.pdf">PDF English translation</a>
+          </p>
+          <p><a
+              href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/"
+              >Scaife&#xA0;Reader</a> (Perseus)</p>
+        </div>
+        <blockquote>
+          <p>στάσεως δέ ποτε Ἀθήνησι γενομένης εἰσῆλθεν εἰς τὴν ἐκκλησίαν καὶ φανεὶς μόνον σιωπᾶν
+            ἐποίησεν αὐτούς· ὁ δὲ ἰδὼν ἤδη μετεγνωκότας οὐδὲν εἰπὼν καὶ αὐτὸς ἀπηλλάγη.</p>
+          <p>Once when the Athenians had collapsed into political discord, he went to the assembly
+            and just by appearing, brought them to silence. When he saw they had relented, he
+            excused himself without a word. </p>
+          <p style="text-align: right">(Lucian, <b>Life of Demonax</b>)</p>
+        </blockquote>
+        <div>
+          <h4>On this site</h4>
+          <ul>
+            <li><a href="Demonax/Demonax_scholia-EDITIO.html">Scholia 2026 Reader</a> - experimental
+              design of a dynamic reading interface for intermediate-level students of Ancient
+              Greek. The technology stack is based on TEI XML to support structured authoring and
+              editing of text, translation and glosses. The approach works with any languages
+              supported by Unicode.</li>
+            <li><a href="Demonax/Life-of-Demonax.pdf">A PDF version</a> of the developer's English
+              translation (only) is laid out for the page.</li>
+          </ul>
+          <p>The translation and notes are by the developer, and any errors are mine. I also
+            contributed the sectioning and section titles. Especially if you have corrections or
+            suggestions for improvement, please provide feedback in the <a
+              href="https://github.com/wendellpiez/raventracks">site repository</a>.</p>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+          <li>The <a target="_blank" href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/" >Scaife Reader</a> interface to the Perseus text of <i>Demonax</i> may represent the state of the art in graded readers.</li>
+            <li>An amazing resource for the student: <a target="_blank" href="https://lucianofsamosata.info/">The Lucian of Samosata Project</a>.</li>
+          </ul>
+        </div>
+      </details>
       <section>
         <h3>Also by the developer</h3>
         <ul>
-          <li><a href="https://wendellpiez.github.io/PellucidLiterature/PellucidLiterature.xml">Pellucid Literature</a> - more experiments using different production methods (all XML-based)</li>
-          <li><a href="https://wendellpiez.github.io/XMLjellysandwich/">XML Jelly Sandwich</a>
-            demonstrations - XSLT in the browser using SaxonJS. Includes <ul>
+          <li><a href="https://wendellpiez.github.io/PellucidLiterature/PellucidLiterature.xml" >Pellucid Literature</a> - more experiments using different production methods (all XML-based)</li>
+          <li><a href="https://wendellpiez.github.io/XMLjellysandwich/">XML Jelly Sandwich</a> demonstrations - XSLT in the browser using SaxonJS. Includes <ul>
               <li>An <a href="https://wendellpiez.github.io/XMLjellysandwich/IChing/">I Ching</a> engine</li>
               <li><a href="https://wendellpiez.github.io/XMLjellysandwich/VerseEngineer/">EVE, the Electronic Verse Engineer</a>
               </li>
-            </ul></li>
+            </ul>
+          </li>
           <li>Print your own <a href="https://github.com/wendellpiez/GreekVocab">Ancient Greek Vocabulary flashcards</a></li>
           <li><a href="http://wendellpiez.com/">My business home page</a> (due for refurb)</li>
         </ul>
       </section>
-        </main>
-        <footer>
-            <h4>Raven Tracks: Experiments in Media</h4>
-            <p>A project of Wendell Piez, 2026- </p>
-            <p>MIT License - Please share freely (while crediting sources)</p>
-            <p>See the <a href="https://github.com/wendellpiez/raventracks">source code</a> on
-                Github</p>
-        </footer>
-    </body>
+    </main>
+    <footer>
+      <h4>Raven Tracks: Experiments in Media</h4>
+      <p>A project of Wendell Piez, 2026- </p>
+      <p>MIT License - Please share freely (while crediting sources)</p>
+      <p>See the <a href="https://github.com/wendellpiez/raventracks">source code</a> on Github</p>
+    </footer>
+  </body>
 </html>
