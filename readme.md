@@ -2,7 +2,7 @@
 
 The site is hosted in Github Pages and visible at https://raventracks.org.
 
-It serves as an online repository and access point for projects under development.
+It serves as an online repository and access point for projects.
 
 This is a statically maintained, handmade web site, although the pages on the site (web pages and PDFs) are created using power tools.
 
@@ -16,7 +16,9 @@ If you have a response or feedback to offer, please create a Github [Issue](./Is
 
 See more work:
 
-[Pellucid Literature](https://wendellpiez.github.io/PellucidLiterature/PellucidLiterature.xml)
+The [XProc Zone](https://xproc.zone) XProc Zone - resource site for users and students of XProc, the XML pipelining language
+
+[Pellucid Literature](https://wendellpiez.github.io/PellucidLiterature/PellucidLiterature.xml) - projects posted with their (open source) production infrastructure
 
 [XML Jelly Sandwich](https://wendellpiez.github.io/XMLjellysandwich/) XSLT power tools in the browser (SaxonJS)
 
