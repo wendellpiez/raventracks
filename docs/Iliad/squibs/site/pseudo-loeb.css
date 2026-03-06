@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+@media print {
+  nav, nav *, .no_print { display: none !important; } 
+  .print_only { display: block !important }
+
+footer { display: grid; grid-template-columns: 1fr 1fr min-content;
+         width: 100vw; font-size: 80% !important }
+footer > div:first-child { text-align: left }
+footer > div:last-child { text-align: right; width: fit-content }
+
+}
+
+.print_only { display: none }
+
+html, body { font-family: Alegreya }
+
+header { display: flex; gap: 2em }
+header * { margin: 0em; align-content: end }
+  
+nav { float: right }
+nav a { padding: 0.2em; border: thin solid darkgreen; margin: 0em 0.2em }
+
+a { text-decoration: none }
+a:hover { text-decoration: underline }
+
+footer { font-size: 90%; text-align: center; margin: 1em auto }
+footer * { margin: 0em }
+
+main { padding-top: 1em; margin: 1em 0em; border-top: thin solid black; display: flex }
+main > div { align-content: start; height: fit-content }
+main div *:first-child { margin-top: 0em }
+
+main.squib-index { display: block }
+
+.squib-index a { content: '*' }
+
+p.squib { display: inline-block; margin: 0.2em;
+  border: thin solid black; min-width: 4em;
+  background-color: whitesmoke;
+  padding: 0.2em;
+  text-align: center; }
+
+.transcription { font-size: 120%; width: 68%; orphans: 3; widows: 3 }
+
+.murray1924_translation { width: 32%; border-left: thin solid black; padding-left: 1em }
+.murray1924_translation h4 { text-align: right; margin: 0em }
+
+.line { padding-left: 4em; text-indent: -5em }
+.line:before { content: attr(data_n); display: inline-block; width: 3em; text-align: right; padding-right: 0.8em; font-size: small; font-family: sans-serif; color: darkgrey }
+.line .choice { text-indent: initial }

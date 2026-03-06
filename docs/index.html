@@ -11,6 +11,7 @@ div.links p:hover { outline: medium solid black; background: whitesmoke }
 h4:first-child { margin: 0em }
 section    { margin-top: 1em }
 main       { margin: 0vh auto; max-width: 48em }
+details { }
 #logo      { margin: 0vh 5vw }
 blockquote { font-size: 120%; max-width: 28em; margin: 0.6em auto }
 a          { color: midnightblue; text-decoration: none }
@@ -19,8 +20,9 @@ a:hover    { text-decoration: underline }
 footer     { border-top: thin solid black;
              padding: 1em; text-align: center; max-width: 80%; margin: 2vh auto }
 footer p, footer h4 { margin: 0em }
-details { padding: 0.8em; background-color: gainsboro; border: thin inset black }
-details summary { font-size: 120%; font-weight: bold }</style>
+details {  margin-top: 1em; padding: 0.8em; background-color: gainsboro; border: thin inset black }
+details details { padding: 0em; border: none }
+details summary.head { font-size: 120%; font-weight: bold }</style>
     <link rel="icon" href="site/tracks-icon.svg" type="image/svg+xml">
   </head>
   <body>
@@ -29,7 +31,7 @@ details summary { font-size: 120%; font-weight: bold }</style>
     <h2>Experiments in Media</h2>
     <main>
       <details open="open">
-        <summary>Life of Demonax (Lucian of Samosata, Second Century CE)</summary>
+        <summary class="head">Life of Demonax (Lucian of Samosata, Second Century CE)</summary>
         <div class="links">
           <p>
             <a href="Demonax/Demonax_scholia-EDITIO.html">Scholia&#xA0;2026 Reader</a>
@@ -37,9 +39,6 @@ details summary { font-size: 120%; font-weight: bold }</style>
           <p>
             <a href="Demonax/Life-of-Demonax.pdf">PDF English translation</a>
           </p>
-          <p><a
-              href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/"
-              >Scaife&#xA0;Reader</a> (Perseus)</p>
         </div>
         <blockquote>
           <p>στάσεως δέ ποτε Ἀθήνησι γενομένης εἰσῆλθεν εἰς τὴν ἐκκλησίαν καὶ φανεὶς μόνον σιωπᾶν
@@ -50,32 +49,72 @@ details summary { font-size: 120%; font-weight: bold }</style>
           <p style="text-align: right">(Lucian, <b><a href="Demonax/Demonax_scholia-EDITIO.html#e_53">Life of Demonax</a></b>)</p>
         </blockquote>
         <div>
-          <h4>On this site</h4>
-          <ul>
-            <li><a href="Demonax/Demonax_scholia-EDITIO.html">Scholia 2026 Reader</a> - experimental
-              design of a dynamic reading interface for intermediate-level students of Ancient
-              Greek. The technology stack is based on TEI XML to support structured authoring and
-              editing of text, translation and glosses. The approach works with any languages
-              supported by Unicode.</li>
-            <li><a href="Demonax/Life-of-Demonax.pdf">A PDF version</a> of the developer's English
-              translation (only) is laid out for the page.</li>
-          </ul>
-          <p>The translation and notes are by the developer, and any errors are mine. I also
-            contributed the sectioning and section titles. Especially if you have corrections or
-            suggestions for improvement, please provide feedback in the <a
-              href="https://github.com/wendellpiez/raventracks">site repository</a>.</p>
+          <details>
+            <summary class="h4">On this site</summary>
+            <ul>
+              <li><a href="Demonax/Demonax_scholia-EDITIO.html">Scholia 2026 Reader</a> -
+                experimental design of a dynamic reading interface for intermediate-level students
+                of Ancient Greek. The technology stack is based on TEI XML to support structured
+                authoring and editing of text, translation and glosses. The approach works with any
+                languages supported by Unicode.</li>
+              <li><a href="Demonax/Life-of-Demonax.pdf">A PDF version</a> of the developer's English
+                translation (only) is laid out for the page.</li>
+            </ul>
+            <p>The translation and notes are by the developer, and any errors are mine. I also
+              contributed the sectioning and section titles. Especially if you have corrections or
+              suggestions for improvement, please provide feedback in the <a
+                href="https://github.com/wendellpiez/raventracks">site repository</a>.</p>
+          </details>
+          <details>
+            <summary class="h4">On the web</summary>
+            <ul>
+              <li>The <a target="_blank"
+                  href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/"
+                  >Scaife Reader</a> interface to the Perseus text of <i>Demonax</i> may represent
+                the state of the art in interactive readers.</li>
+              <li>An amazing resource for the student: <a target="_blank"
+                  href="https://lucianofsamosata.info/">The Lucian of Samosata Project</a>.</li>
+            </ul>
+          </details>
         </div>
-        <div>
-          <h4>Elsewhere</h4>
-          <ul>
-          <li>The <a target="_blank" href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.perseus-grc2:1-5/" >Scaife Reader</a> interface to the Perseus text of <i>Demonax</i> may represent the state of the art in graded readers.</li>
-            <li>An amazing resource for the student: <a target="_blank" href="https://lucianofsamosata.info/">The Lucian of Samosata Project</a>.</li>
-          </ul>
+      </details>
+      <details open="open">
+        <summary class="head">Homer <i>Scriptorium</i> exercises - <a href="Iliad/squibs/index.html"
+            >ILIAD</a></summary>
+        <div class="links">
+          <p>
+            <a href="Iliad/squibs/index.html">Index to squibs</i></a>
+          </p>
+          <p>
+            <a href="Iliad/squibs/VenetusA_ILIAD_book_01_001-007.html">Book I, lines 1-7</a>
+          </p>
         </div>
+        <p>A rendering of the Iliad <b>Venetus A</b> Manuscript, broken into line groups (<q>squibs</q>)
+          corresponding to paragraphs in the 1924 translation by A. T. Murray. 1137 pages are available
+        covering all 24 books (15639 lines) of the epic.</p>
+        <p>Both source texts are in the public domain. These copies were derived from the
+          <a href="https://github.com/homermultitext/hmt-archive">Homer Multitext
+            Project</a> in the case of the Venetus A (with fabulous TEI encoding); and for the Murray
+          translation <a href="https://theoi.com">theoi.com</a>, a resource about Greek and Roman
+          antiquity.</p><details>
+          <summary>How to use the squibs</summary>
+          <p>When printed, pages are meant to serve as worksheets for Greek study, and in
+            particular, to be adapted for use in the <a
+              href="https://www.alexanderarguelles.com/question-answer/tag/scriptorium/">Scriptorium
+              Technique</a> for language study (developed by Alexander Arguelles).</p>
+          <p>Preview your print job with different scaling and page selection options, if necessary,
+            to find best settings for the passage. Landscape printing is recommended. A <q>scratch
+              pad</q> image in the footer helps to prevent crowding on a single page; this can be
+            omitted from printing when not wanted.</p>
+          <p>Only one error in alignment has been found so far; these can be <a
+              href="https://github.com/wendellpiez/raventracks/issues">corrected</a>.</p>
+        </details>
+        
       </details>
       <section>
         <h3>Also by the developer</h3>
         <ul>
+          <li>The <a href="https://xproc.zone">XProc Zone</a>, a set of XProc demonstration and documentation projects.</li>
           <li><a href="https://wendellpiez.github.io/PellucidLiterature/PellucidLiterature.xml" >Pellucid Literature</a> - more experiments using different production methods (all XML-based)</li>
           <li><a href="https://wendellpiez.github.io/XMLjellysandwich/">XML Jelly Sandwich</a> demonstrations - XSLT in the browser using SaxonJS. Includes <ul>
               <li>An <a href="https://wendellpiez.github.io/XMLjellysandwich/IChing/">I Ching</a> engine</li>
