@@ -20,7 +20,7 @@ The [XProc Zone](https://xproc.zone) XProc Zone - resource site for users and st
 
 [More repositories](https://github.com/wendellpiez?tab=repositories) in Github
 
-License - see [LICENSE](LICENSE) - tl/dr you are free to copy and use freely while keeping credits intact.
+License - see [LICENSE](LICENSE) - you are free to copy and use freely while keeping credits intact.
 
 Everything here is available to upstream producers and enablers - just ask!
 

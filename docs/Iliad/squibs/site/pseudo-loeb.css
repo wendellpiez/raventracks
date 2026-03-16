@@ -14,13 +14,16 @@ footer > div:last-child { text-align: right; width: fit-content }
 
 .print_only { display: none }
 
-html, body { font-family: Alegreya }
+html, body { font-family: Alegreya; background-color: white }
 
 header { display: flex; gap: 2em }
 header * { margin: 0em; align-content: end }
   
-nav { float: right }
-nav a { padding: 0.2em; border: thin solid darkgreen; margin: 0em 0.2em }
+nav { float: right; display: flex; font-family: sans-serif; font-size: smaller }
+nav .linkbox { display: flex; padding: 0.3em; border:thin solid black; margin: 0em 0.2em; align-items: center }
+
+nav a { padding: 0.2em; outline: thin solid black; margin: 0em 0.3em }
+nav a:hover { outline: thin dashed black }
 
 a { text-decoration: none }
 a:hover { text-decoration: underline }
