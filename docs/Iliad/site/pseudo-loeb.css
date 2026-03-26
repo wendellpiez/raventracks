@@ -11,6 +11,9 @@ footer { display: grid; grid-template-columns: 1fr 1fr min-content;
 footer > div:first-child { text-align: left }
 footer > div:last-child { text-align: right; width: fit-content }
 
+details.term:not(:open) { display: none }
+details.term a { display: none }
+
 }
 
 .print_only { display: none }
@@ -18,8 +21,8 @@ footer > div:last-child { text-align: right; width: fit-content }
 html, body { font-family: Alegreya; background-color: white }
 
 header { display: flex; gap: 2em }
-header * { margin: 0em; align-content: end }
-  
+header * { margin: 0em; align-content: end; vertical-align: text-bottom }
+ 
 nav, nav .linkbox { display: flex }
 
 nav { float: right; clear: both; font-family: sans-serif; font-size: smaller }
@@ -33,27 +36,45 @@ nav .linkbox
 nav a { padding: 0.2em; outline: thin solid black; margin: 0em 0.3em }
 nav a:hover { outline: thin dashed black }
 
+nav a[target]:after { content : "\2BA5" }
 a { text-decoration: none }
 a:hover { text-decoration: underline }
 
 footer { font-size: 90%; text-align: center; margin: 1em auto; width: 100% }
 footer * { margin: 0em }
 
-main { margin: 1em 0em; display: flex }
-main > div { align-content: start; height: fit-content }
-main div *:first-child { margin-top: 0em }
+main { margin: 1em 0em }
+main.squib { display: flex }
+
+main.squib > div { align-content: start; height: fit-content }
+main.squib div *:first-child { margin-top: 0em }
 
 div.panel { width: 32% }
 
-main.squib-index { display: block }
+main.squib-index, main.crib-index { display: block }
 
-.squib-index a { content: '*' }
-
-p.squib { display: inline-block; margin: 0.2em;
+p.squib, p.crib { display: inline-block; margin: 0.2em;
   border: thin solid black; min-width: 4em;
   background-color: whitesmoke;
   padding: 0.2em;
   text-align: center; }
+
+main.crib { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2em }
+
+.term { border: thin dashed grey; padding: 0.6em; 
+   }
+
+.term.verb { border: medium double grey }
+.term.noun { border: thin solid grey }
+
+p.line_no { float: right; clear: both; margin: 0em }
+
+p.term .lemmata { display: flex; flex-direction: column }
+
+.lemma { padding-left: 0.8em }
+
+.form { font-size: 105%; font-weight: bold }
+.properties { font-size: 80% }
 
 .transcription { font-size: 120%; width: 68%; orphans: 3; widows: 3 }
 
@@ -62,4 +83,4 @@ p.squib { display: inline-block; margin: 0.2em;
 
 .line { padding-left: 4em; text-indent: -5em }
 .line:before { content: attr(data_n); display: inline-block; width: 3em; text-align: right; padding-right: 0.8em; font-size: small; font-family: sans-serif; color: darkgrey }
-.line .choice { text-indent: initial }
+.line .choice { text-indent: initial; font-size: smaller }
