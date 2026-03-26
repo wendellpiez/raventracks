@@ -5,8 +5,10 @@
     <style>
 body       { background: linear-gradient(whitesmoke, #36454F);
              font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
+div.diptych { display: grid; grid-template-columns: 1fr max-content; border-top: thin dotted black }
 div.links   { display: flex; gap: 1em; justify-content: center; max-width: 60%; margin: 0em auto }
-div.links p { width: fit-content; padding: 0.2em; background-color: silver; outline: medium solid grey; text-align: center }
+div.diptych div.links { justify-content: right; margin-right: 0em }
+div.links p { width: fit-content; white-space: nowrap; height: min-content; padding: 0.2em; background-color: silver; outline: medium solid grey; text-align: center }
 div.links p:hover { outline: medium solid black; background: whitesmoke }
 h4:first-child { margin: 0em }
 section    { margin-top: 1em }
@@ -22,7 +24,7 @@ footer     { border-top: thin solid black;
 footer p, footer h4 { margin: 0em }
 details {  margin-top: 1em; padding: 0.8em; background-color: gainsboro; border: thin inset black }
 details details { padding: 0em; border: none }
-details summary.head { font-size: 120%; font-weight: bold }</style>
+details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em }</style>
     <link rel="icon" href="site/tracks-icon.svg" type="image/svg+xml"/>
   </head>
   <body>
@@ -88,21 +90,40 @@ details summary.head { font-size: 120%; font-weight: bold }</style>
       <details open>
         <summary class="head">Homer <i>Scriptorium</i> exercises - <a href="Iliad/squibs/index.html"
             >ILIAD</a></summary>
+        <div class="diptych">
+        <h3>Squibs (<i>extracta scribenda</i>)</h3>
         <div class="links">
           <p>
             <a href="Iliad/squibs/index.html">Index to squibs</a>
           </p>
           <p>
-            <a href="Iliad/squibs/VenetusA_ILIAD_book_01_001-007.html">Book I, lines 1-7</a>
+            <a href="Iliad/squibs/book01/ILIAD_book_01_001-007.html">Book I, lines 1-7</a>
           </p>
+        </div>
+          </div><div class="diptych">
+          <h3>Cribs (running vocabularies, segmented)</h3>
+        <div class="links">
+          <p>
+            <a href="Iliad/cribs/index.html">Index to cribs</a>
+          </p>
+          <p>
+            <a href="Iliad/cribs/book01/ILIAD_book_01_001-007.html">Book I, lines 1-7</a>
+          </p>
+        </div>
         </div>
         <p>A rendering of the Iliad <b>Venetus A</b> Manuscript, broken into line groups
             (<q>squibs</q>) corresponding to paragraphs in the 1924 translation by A. T. Murray.
-          1137 pages are available covering all 24 books (15639 lines) of the epic.</p>
-        <p>Both source texts are in the public domain. These copies were derived from the <a
-            href="https://github.com/homermultitext/hmt-archive">Homer Multitext Project</a> in the
-          case of the Venetus A (with fabulous TEI encoding); and for the Murray translation <a
-            href="https://theoi.com">theoi.com</a>, a resource about Greek and Roman antiquity.</p>
+          1137 pages are available covering all 24 books (15639 lines) of the epic.
+        In parallel with the squibs, each segment also has a page given to a running vocabulary,
+        a crib.</p>
+        <p>Links will take you to online resources for further study as well as to a crib created for the given passage.</p>
+        <p>All source texts were acquired from the Internet as noted in their footers. Grateful
+          acknowledgement to the <a
+            href="https://github.com/homermultitext/hmt-archive">Homer Multitext Project</a> for the
+          transcribed Venetus A (with fabulous TEI encoding); <a
+            href="https://theoi.com">theoi.com</a> for the Murray translation; and to
+          Github user <a href="https://github.com/gcelano">GCelano</a> (Giuseppe Celano) for work
+          <a href="https://github.com/gcelano/LemmatizedAncientGreekXML/tree/master/texts">integrating morphological data</a> into an encoded Iliad.</p>
         <p>Only one error in alignment has been found so far; these can be <a
             href="https://github.com/wendellpiez/raventracks/issues">corrected</a>.</p>
         <details>
@@ -122,7 +143,13 @@ details summary.head { font-size: 120%; font-weight: bold }</style>
             results. A landscape setting can work well. A <q>scratch pad</q> image in the footer helps
             to prevent crowding on a single page; an unwanted final page can be omitted from
             printing.</p>
-         
+          
+        </details>
+        <details>
+          <summary>How to use the cribs (running vocabularies)</summary>
+          <p>The cribs offer vocabulary help, not with interpreting (translating) vocabulary, but understanding it. Vocabulary terms are listed with links for lookup into the excellent University of Chicago resources <a href="https://logeion.uchicago.edu/morpho/%CE%BC%CE%BF%CF%81%CF%86%CE%AE">Morpho</a> (for morphological analysis) and <a href="https://logeion.uchicago.edu/">Logeion</a> (when a dictionary form is given).</p>
+          <p>These pages are also designed to be printed, for annotation by hand or even for clipping. When you print with
+            a web browser, only the expanded terms are printed, as shown in the preview. By this means you can limit the print to just the words you want to study.</p>
         </details>
         <details>
           <summary>Scholia Method</summary>
@@ -130,10 +157,12 @@ details summary.head { font-size: 120%; font-weight: bold }</style>
               href="https://www.alexanderarguelles.com/question-answer/tag/scriptorium/">Scriptorium
               Technique</a> for language study, developed by Alexander Arguelles and popularized
             on line.</p>
-          <p>The Scholia Method supplements <i>Scriptorium</i> with an additional step: prior to transcription of a text under study
-            (the essence of <i>Scriptorium</i>), we annotate a printed copy with whatever notes or glosses are helpful
-            for understanding, retention, and later reference. A squib facilitates this: it requires completion,
-          like a coloring book, except using letters, words and language, not shapes and colors. (Or shapes and colors too.)</p>
+          <p>The Scholia Method supplements <i>Scriptorium</i> with an additional step: prior to
+            transcription of a text under study (the essence of <i>Scriptorium</i>), we annotate a
+            printed copy with whatever notes or glosses are helpful for understanding, retention,
+            and later reference. Squibs and cribs are meant to facilitate this: before rendering,
+            the text requires completion, like a coloring book, except using letters, words and
+            language, not shapes and colors. (Or shapes and colors too.)</p>
         </details>
         
       </details>
