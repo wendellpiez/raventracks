@@ -6,13 +6,17 @@
   .print_only { display: block !important }
   .print_head { display: block !important }
 
+/* main.crib { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2em } */
+
 footer { display: grid; grid-template-columns: 1fr 1fr min-content;
          width: 100vw; font-size: 80% !important }
 footer > div:first-child { text-align: left }
 footer > div:last-child { text-align: right; width: fit-content }
 
-details.term:not(:open) { display: none }
-details.term a { display: none }
+details.vocab { border: medium double grey !important }
+
+details.vocab:not(:open) { display: none }
+details.vocab a { display: none }
 
 }
 
@@ -20,23 +24,38 @@ details.term a { display: none }
 
 html, body { font-family: Alegreya; background-color: white }
 
+.hideTranslation .def { display: none }
+
+/*  main.crib {
+ display: flex; flex-direction: column; flex-wrap: wrap; max-height: 90vh
+  }  */
+  
+main.crib { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.2em }
+  
+main.crib > * { flex: 0 0 fit-content; }
+
 header { display: flex; gap: 2em }
 header * { margin: 0em; align-content: end; vertical-align: text-bottom }
  
 nav, nav .linkbox { display: flex }
 
-nav { float: right; clear: both; font-family: sans-serif; font-size: smaller }
+#translationSwitch { float: right }
+
+nav { position: fixed; right: 0.8rem; font-family: sans-serif; font-size: smaller;
+  background-color: white; outline: thin solid silver; padding: 0.2em }
 
 aside.print_head { text-align: right; margin: 1.2em 0em 1.2em auto; padding: 0.3em; border:thin solid black;
   font-size: smaller; font-family: sans-serif; max-width: fit-content }
 
 nav .linkbox
-  { padding: 0.3em; border:thin solid black; margin: 0em 0.2em; align-items: center }
+  { padding: 0.3em; border:thin solid black; margin: 0em 0.2em; background-color: white; align-items: center }
+
+nav button { margin: 0em 0.1em }
 
 nav a { padding: 0.2em; outline: thin solid black; margin: 0em 0.3em }
 nav a:hover { outline: thin dashed black }
 
-nav a[target]:after { content : "\2BA5" }
+nav a[target] { font-style: italic }
 a { text-decoration: none }
 a:hover { text-decoration: underline }
 
@@ -59,22 +78,27 @@ p.squib, p.crib { display: inline-block; margin: 0.2em;
   padding: 0.2em;
   text-align: center; }
 
-main.crib { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2em; }
+.vocab { margin: 0.2em 0.2em 0em 0em; border: thin dashed grey; padding: 0.6em; }
 
-.term { border: thin dashed grey; padding: 0.6em;
-   }
+.vocab.verb { border: medium double grey }
+.vocab.noun { border: thin solid grey }
 
-.term.verb { border: medium double grey }
-.term.noun { border: thin solid grey }
+p.line_no { float: right; clear: both; margin: 0em 0em 0em 0.4em; }
 
-p.line_no { float: right; clear: both; margin: 0em }
+.ana { display: grid;
+       grid-template-columns: 1fr 2fr }
 
-p.term .lemmata { display: flex; flex-direction: column }
+p.vocab .lemmata { display: flex; flex-direction: column;
+  margin-right: 0.4em }
+  
+p.vocab .lemma { display: flex; flex-direction: column }
 
-.lemma { padding-left: 0.8em }
+.lemma { padding: 0.2em; display: inline-flex;
+  flex-direction: column; border: thin inset black;
+  margin-bottom: 0.4em }
 
 .form { font-size: 105%; font-weight: bold }
-.properties { font-size: 80% }
+.properties { font-size: 80%; margin-right: 0.4em }
 
 .transcription { font-size: 120%; width: 68%; orphans: 3; widows: 3 }
 

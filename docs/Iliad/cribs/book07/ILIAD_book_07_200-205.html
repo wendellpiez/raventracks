@@ -2,10 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <title>ILIAD CRIB - Book VII  200-205</title>
+      <link rel="icon" href="../../site/tracks-icon.svg" type="image/svg+xml"/>
       <link rel="stylesheet" href="../../site/pseudo-loeb.css"/>
    </head>
    <body>
       <nav id="links">
+         <button onclick="this.nextElementSibling.style.display = 'block'; this.style.display='none'; document.querySelectorAll('details.vocab').forEach(d =&gt; d.open = true);"
+                 id="openAll"
+                 style="display: block">Open All</button>
+         <button onclick="this.previousElementSibling.style.display = 'block'; this.style.display='none'; document.querySelectorAll('details.vocab').forEach(d =&gt; d.open = false);"
+                 style="display: none"
+                 id="closeAll">Close All</button>
+         <button id="translationSwitch"
+                 onclick="getElementById('vocabulary').classList.toggle('hideTranslation');              getElementById('vocabulary').classList.contains('hideTranslation') ? this.innerHTML='Show translations' : this.innerHTML='Hide translations'">Show translations</button>
          <div class="linkbox">
             <span>cribs</span>
             <a href="../index.html">all</a>
@@ -19,9 +28,9 @@
          <h2 class="subhead">Vocabulary Worksheet</h2>
       </header>
       <aside class="print_head print_only">Iliad VII  200-205 [15 / 34]</aside>
-      <main class="crib">
-         <details class="term verb">
-            <summary class="form">ἔφαθʼ<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἔφαθʼ">⮥</a>
+      <main class="crib hideTranslation" id="vocabulary">
+         <details class="vocab verb">
+            <summary class="form">ἔφαθʼ<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἔφαθʼ">*</a>
             </summary>
             <p class="line_no">7.200</p>
             <div class="ana">
@@ -35,8 +44,8 @@
                <span class="lemmata"><!--lemmata--></span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">εὔχοντο<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὔχοντο">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">εὔχοντο<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὔχοντο">*</a>
             </summary>
             <p class="line_no">7.200</p>
             <div class="ana">
@@ -48,13 +57,16 @@
                   <span class="mood">ind</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l2">εὔχομαι<a target="logeion" href="https://logeion.uchicago.edu/εὔχομαι">⮥</a>
+                  <span class="lemma l2">
+                     <span class="term">εὔχομαι<a target="logeion" href="https://logeion.uchicago.edu/εὔχομαι">*</a>
+                     </span>
+                     <span class="def">to pray, offer prayers, pay one's vows, make a vow</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">Διὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/Διὶ">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">Διὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/Διὶ">*</a>
             </summary>
             <p class="line_no">7.200</p>
             <div class="ana">
@@ -64,13 +76,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Ζεύς<a target="logeion" href="https://logeion.uchicago.edu/Ζεύς">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Ζεύς<a target="logeion" href="https://logeion.uchicago.edu/Ζεύς">*</a>
+                     </span>
+                     <span class="def">Zeus</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">Κρονίωνι<a target="morpho" href="https://logeion.uchicago.edu/morpho/Κρονίωνι">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">Κρονίωνι<a target="morpho" href="https://logeion.uchicago.edu/morpho/Κρονίωνι">*</a>
             </summary>
             <p class="line_no">7.200</p>
             <div class="ana">
@@ -80,13 +95,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Κρονίων<a target="logeion" href="https://logeion.uchicago.edu/Κρονίων">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Κρονίων<a target="logeion" href="https://logeion.uchicago.edu/Κρονίων">*</a>
+                     </span>
+                     <span class="def">son of Cronus</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">ἄνακτι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἄνακτι">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">ἄνακτι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἄνακτι">*</a>
             </summary>
             <p class="line_no">7.200</p>
             <div class="ana">
@@ -96,13 +114,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ἄναξ<a target="logeion" href="https://logeion.uchicago.edu/ἄναξ">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ἄναξ<a target="logeion" href="https://logeion.uchicago.edu/ἄναξ">*</a>
+                     </span>
+                     <span class="def">a lord, master</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adv">
-            <summary class="form">ὧδε<a target="morpho" href="https://logeion.uchicago.edu/morpho/ὧδε">⮥</a>
+         <details class="vocab adv">
+            <summary class="form">ὧδε<a target="morpho" href="https://logeion.uchicago.edu/morpho/ὧδε">*</a>
             </summary>
             <p class="line_no">7.201</p>
             <div class="ana">
@@ -110,13 +131,16 @@
                   <span class="POS">adv</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ὧδε<a target="logeion" href="https://logeion.uchicago.edu/ὧδε">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ὧδε<a target="logeion" href="https://logeion.uchicago.edu/ὧδε">*</a>
+                     </span>
+                     <span class="def">in this wise, so, thus</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">εἴπεσκεν<a target="morpho" href="https://logeion.uchicago.edu/morpho/εἴπεσκεν">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">εἴπεσκεν<a target="morpho" href="https://logeion.uchicago.edu/morpho/εἴπεσκεν">*</a>
             </summary>
             <p class="line_no">7.201</p>
             <div class="ana">
@@ -128,15 +152,21 @@
                   <span class="mood">ind</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">λέγω<a target="logeion" href="https://logeion.uchicago.edu/λέγω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">λέγω<a target="logeion" href="https://logeion.uchicago.edu/λέγω">*</a>
+                     </span>
+                     <span class="def">to pick; to say</span>
                   </span>
-                  <span class="lemma l2">εἶπον<a target="logeion" href="https://logeion.uchicago.edu/εἶπον">⮥</a>
+                  <span class="lemma l2">
+                     <span class="term">εἶπον<a target="logeion" href="https://logeion.uchicago.edu/εἶπον">*</a>
+                     </span>
+                     <span class="def">to speak, say</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">ἰδὼν<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἰδὼν">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">ἰδὼν<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἰδὼν">*</a>
             </summary>
             <p class="line_no">7.201</p>
             <div class="ana">
@@ -149,13 +179,16 @@
                   <span class="mood">participle</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ὁράω<a target="logeion" href="https://logeion.uchicago.edu/ὁράω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ὁράω<a target="logeion" href="https://logeion.uchicago.edu/ὁράω">*</a>
+                     </span>
+                     <span class="def">to see</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">οὐρανὸν<a target="morpho" href="https://logeion.uchicago.edu/morpho/οὐρανὸν">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">οὐρανὸν<a target="morpho" href="https://logeion.uchicago.edu/morpho/οὐρανὸν">*</a>
             </summary>
             <p class="line_no">7.201</p>
             <div class="ana">
@@ -165,13 +198,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">οὐρανός<a target="logeion" href="https://logeion.uchicago.edu/οὐρανός">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">οὐρανός<a target="logeion" href="https://logeion.uchicago.edu/οὐρανός">*</a>
+                     </span>
+                     <span class="def">heaven</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">εὐρύν<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὐρύν">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">εὐρύν<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὐρύν">*</a>
             </summary>
             <p class="line_no">7.201</p>
             <div class="ana">
@@ -182,13 +218,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">εὐρύς<a target="logeion" href="https://logeion.uchicago.edu/εὐρύς">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">εὐρύς<a target="logeion" href="https://logeion.uchicago.edu/εὐρύς">*</a>
+                     </span>
+                     <span class="def">wide, broad</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">Ζεῦ<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ζεῦ">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">Ζεῦ<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ζεῦ">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -198,13 +237,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Ζεύς<a target="logeion" href="https://logeion.uchicago.edu/Ζεύς">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Ζεύς<a target="logeion" href="https://logeion.uchicago.edu/Ζεύς">*</a>
+                     </span>
+                     <span class="def">Zeus</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">πάτερ<a target="morpho" href="https://logeion.uchicago.edu/morpho/πάτερ">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">πάτερ<a target="morpho" href="https://logeion.uchicago.edu/morpho/πάτερ">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -214,13 +256,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">πατήρ<a target="logeion" href="https://logeion.uchicago.edu/πατήρ">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">πατήρ<a target="logeion" href="https://logeion.uchicago.edu/πατήρ">*</a>
+                     </span>
+                     <span class="def">a father</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adv">
-            <summary class="form">Ἴδηθεν<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ἴδηθεν">⮥</a>
+         <details class="vocab adv">
+            <summary class="form">Ἴδηθεν<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ἴδηθεν">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -228,13 +273,16 @@
                   <span class="POS">adv</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Ἴδη<a target="logeion" href="https://logeion.uchicago.edu/Ἴδη">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Ἴδη<a target="logeion" href="https://logeion.uchicago.edu/Ἴδη">*</a>
+                     </span>
+                     <span class="def">Ida</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">μεδέων<a target="morpho" href="https://logeion.uchicago.edu/morpho/μεδέων">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">μεδέων<a target="morpho" href="https://logeion.uchicago.edu/morpho/μεδέων">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -247,13 +295,16 @@
                   <span class="mood">participle</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">μεδέων<a target="logeion" href="https://logeion.uchicago.edu/μεδέων">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">μεδέων<a target="logeion" href="https://logeion.uchicago.edu/μεδέων">*</a>
+                     </span>
+                     <span class="def">a guardian</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">κύδιστε<a target="morpho" href="https://logeion.uchicago.edu/morpho/κύδιστε">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">κύδιστε<a target="morpho" href="https://logeion.uchicago.edu/morpho/κύδιστε">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -264,13 +315,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l2">κύδιστος<a target="logeion" href="https://logeion.uchicago.edu/κύδιστος">⮥</a>
+                  <span class="lemma l2">
+                     <span class="term">κύδιστος<a target="logeion" href="https://logeion.uchicago.edu/κύδιστος">*</a>
+                     </span>
+                     <span class="def">most glorious, most honoured, noblest</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">μέγιστε<a target="morpho" href="https://logeion.uchicago.edu/morpho/μέγιστε">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">μέγιστε<a target="morpho" href="https://logeion.uchicago.edu/morpho/μέγιστε">*</a>
             </summary>
             <p class="line_no">7.202</p>
             <div class="ana">
@@ -281,13 +335,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l2">μέγας<a target="logeion" href="https://logeion.uchicago.edu/μέγας">⮥</a>
+                  <span class="lemma l2">
+                     <span class="term">μέγας<a target="logeion" href="https://logeion.uchicago.edu/μέγας">*</a>
+                     </span>
+                     <span class="def">big, great</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">δὸς<a target="morpho" href="https://logeion.uchicago.edu/morpho/δὸς">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">δὸς<a target="morpho" href="https://logeion.uchicago.edu/morpho/δὸς">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -299,13 +356,16 @@
                   <span class="mood">imper</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">δίδωμι<a target="logeion" href="https://logeion.uchicago.edu/δίδωμι">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">δίδωμι<a target="logeion" href="https://logeion.uchicago.edu/δίδωμι">*</a>
+                     </span>
+                     <span class="def">to give</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">νίκην<a target="morpho" href="https://logeion.uchicago.edu/morpho/νίκην">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">νίκην<a target="morpho" href="https://logeion.uchicago.edu/morpho/νίκην">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -315,13 +375,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">νίκη<a target="logeion" href="https://logeion.uchicago.edu/νίκη">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">νίκη<a target="logeion" href="https://logeion.uchicago.edu/νίκη">*</a>
+                     </span>
+                     <span class="def">victory</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">Αἴαντι<a target="morpho" href="https://logeion.uchicago.edu/morpho/Αἴαντι">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">Αἴαντι<a target="morpho" href="https://logeion.uchicago.edu/morpho/Αἴαντι">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -331,13 +394,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Αἴας<a target="logeion" href="https://logeion.uchicago.edu/Αἴας">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Αἴας<a target="logeion" href="https://logeion.uchicago.edu/Αἴας">*</a>
+                     </span>
+                     <span class="def">Ajax</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">ἀγλαὸν<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀγλαὸν">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">ἀγλαὸν<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀγλαὸν">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -348,13 +414,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ἀγλαός<a target="logeion" href="https://logeion.uchicago.edu/ἀγλαός">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ἀγλαός<a target="logeion" href="https://logeion.uchicago.edu/ἀγλαός">*</a>
+                     </span>
+                     <span class="def">splendid, shining, bright, beautiful</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">εὖχος<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὖχος">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">εὖχος<a target="morpho" href="https://logeion.uchicago.edu/morpho/εὖχος">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -364,13 +433,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">εὖχος<a target="logeion" href="https://logeion.uchicago.edu/εὖχος">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">εὖχος<a target="logeion" href="https://logeion.uchicago.edu/εὖχος">*</a>
+                     </span>
+                     <span class="def">the thing prayed for, object of prayer</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">ἀρέσθαι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀρέσθαι">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">ἀρέσθαι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀρέσθαι">*</a>
             </summary>
             <p class="line_no">7.203</p>
             <div class="ana">
@@ -380,15 +452,21 @@
                   <span class="mood">inf</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">αἴρω<a target="logeion" href="https://logeion.uchicago.edu/αἴρω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">αἴρω<a target="logeion" href="https://logeion.uchicago.edu/αἴρω">*</a>
+                     </span>
+                     <span class="def">to take up, raise, lift up</span>
                   </span>
-                  <span class="lemma l1">ἄρνυμαι<a target="logeion" href="https://logeion.uchicago.edu/ἄρνυμαι">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ἄρνυμαι<a target="logeion" href="https://logeion.uchicago.edu/ἄρνυμαι">*</a>
+                     </span>
+                     <span class="def">to receive for oneself, reap, win, gain, earn</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adv">
-            <summary class="form">καὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/καὶ">⮥</a>
+         <details class="vocab adv">
+            <summary class="form">καὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/καὶ">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -396,13 +474,16 @@
                   <span class="POS">adv</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">καί<a target="logeion" href="https://logeion.uchicago.edu/καί">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">καί<a target="logeion" href="https://logeion.uchicago.edu/καί">*</a>
+                     </span>
+                     <span class="def">and, also</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">Ἕκτορά<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ἕκτορά">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">Ἕκτορά<a target="morpho" href="https://logeion.uchicago.edu/morpho/Ἕκτορά">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -412,13 +493,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">Ἕκτωρ<a target="logeion" href="https://logeion.uchicago.edu/Ἕκτωρ">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">Ἕκτωρ<a target="logeion" href="https://logeion.uchicago.edu/Ἕκτωρ">*</a>
+                     </span>
+                     <span class="def">Hector</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">φιλέεις<a target="morpho" href="https://logeion.uchicago.edu/morpho/φιλέεις">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">φιλέεις<a target="morpho" href="https://logeion.uchicago.edu/morpho/φιλέεις">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -430,13 +514,16 @@
                   <span class="mood">ind</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">φιλέω<a target="logeion" href="https://logeion.uchicago.edu/φιλέω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">φιλέω<a target="logeion" href="https://logeion.uchicago.edu/φιλέω">*</a>
+                     </span>
+                     <span class="def">to love, regard with affection</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adv">
-            <summary class="form">καὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/καὶ">⮥</a>
+         <details class="vocab adv">
+            <summary class="form">καὶ<a target="morpho" href="https://logeion.uchicago.edu/morpho/καὶ">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -444,13 +531,16 @@
                   <span class="POS">adv</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">καί<a target="logeion" href="https://logeion.uchicago.edu/καί">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">καί<a target="logeion" href="https://logeion.uchicago.edu/καί">*</a>
+                     </span>
+                     <span class="def">and, also</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">κήδεαι<a target="morpho" href="https://logeion.uchicago.edu/morpho/κήδεαι">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">κήδεαι<a target="morpho" href="https://logeion.uchicago.edu/morpho/κήδεαι">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -462,13 +552,16 @@
                   <span class="mood">ind</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">κήδω<a target="logeion" href="https://logeion.uchicago.edu/κήδω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">κήδω<a target="logeion" href="https://logeion.uchicago.edu/κήδω">*</a>
+                     </span>
+                     <span class="def">to trouble, distress, vex; mid. care for</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adv">
-            <summary class="form">αὐτοῦ<a target="morpho" href="https://logeion.uchicago.edu/morpho/αὐτοῦ">⮥</a>
+         <details class="vocab adv">
+            <summary class="form">αὐτοῦ<a target="morpho" href="https://logeion.uchicago.edu/morpho/αὐτοῦ">*</a>
             </summary>
             <p class="line_no">7.204</p>
             <div class="ana">
@@ -476,15 +569,21 @@
                   <span class="POS">adv</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">αὐτός<a target="logeion" href="https://logeion.uchicago.edu/αὐτός">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">αὐτός<a target="logeion" href="https://logeion.uchicago.edu/αὐτός">*</a>
+                     </span>
+                     <span class="def">unemph. 3rd pers.pronoun; -self; [the] same</span>
                   </span>
-                  <span class="lemma l2">αὐτοῦ<a target="logeion" href="https://logeion.uchicago.edu/αὐτοῦ">⮥</a>
+                  <span class="lemma l2">
+                     <span class="term">αὐτοῦ<a target="logeion" href="https://logeion.uchicago.edu/αὐτοῦ">*</a>
+                     </span>
+                     <span class="def">at the very place, just here, just there</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">ἴσην<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἴσην">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">ἴσην<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἴσην">*</a>
             </summary>
             <p class="line_no">7.205</p>
             <div class="ana">
@@ -495,13 +594,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ἴσος<a target="logeion" href="https://logeion.uchicago.edu/ἴσος">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ἴσος<a target="logeion" href="https://logeion.uchicago.edu/ἴσος">*</a>
+                     </span>
+                     <span class="def">equal to, the same as; adv. perhaps</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term adj">
-            <summary class="form">ἀμφοτέροισι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀμφοτέροισι">⮥</a>
+         <details class="vocab adj">
+            <summary class="form">ἀμφοτέροισι<a target="morpho" href="https://logeion.uchicago.edu/morpho/ἀμφοτέροισι">*</a>
             </summary>
             <p class="line_no">7.205</p>
             <div class="ana">
@@ -512,13 +614,16 @@
                   <span class="number">pl</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ἀμφότερος<a target="logeion" href="https://logeion.uchicago.edu/ἀμφότερος">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ἀμφότερος<a target="logeion" href="https://logeion.uchicago.edu/ἀμφότερος">*</a>
+                     </span>
+                     <span class="def">each of two, both</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">βίην<a target="morpho" href="https://logeion.uchicago.edu/morpho/βίην">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">βίην<a target="morpho" href="https://logeion.uchicago.edu/morpho/βίην">*</a>
             </summary>
             <p class="line_no">7.205</p>
             <div class="ana">
@@ -528,13 +633,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">βία<a target="logeion" href="https://logeion.uchicago.edu/βία">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">βία<a target="logeion" href="https://logeion.uchicago.edu/βία">*</a>
+                     </span>
+                     <span class="def">bodily strength, force, power, might</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term noun">
-            <summary class="form">κῦδος<a target="morpho" href="https://logeion.uchicago.edu/morpho/κῦδος">⮥</a>
+         <details class="vocab noun">
+            <summary class="form">κῦδος<a target="morpho" href="https://logeion.uchicago.edu/morpho/κῦδος">*</a>
             </summary>
             <p class="line_no">7.205</p>
             <div class="ana">
@@ -544,13 +652,16 @@
                   <span class="number">sg</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">κῦδος<a target="logeion" href="https://logeion.uchicago.edu/κῦδος">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">κῦδος<a target="logeion" href="https://logeion.uchicago.edu/κῦδος">*</a>
+                     </span>
+                     <span class="def">glory, renown</span>
                   </span>
                </span>
             </div>
          </details>
-         <details class="term verb">
-            <summary class="form">ὄπασσον<a target="morpho" href="https://logeion.uchicago.edu/morpho/ὄπασσον">⮥</a>
+         <details class="vocab verb">
+            <summary class="form">ὄπασσον<a target="morpho" href="https://logeion.uchicago.edu/morpho/ὄπασσον">*</a>
             </summary>
             <p class="line_no">7.205</p>
             <div class="ana">
@@ -562,7 +673,10 @@
                   <span class="mood">imper</span>
                </span>
                <span class="lemmata"><!--lemmata-->
-                  <span class="lemma l1">ὀπάζω<a target="logeion" href="https://logeion.uchicago.edu/ὀπάζω">⮥</a>
+                  <span class="lemma l1">
+                     <span class="term">ὀπάζω<a target="logeion" href="https://logeion.uchicago.edu/ὀπάζω">*</a>
+                     </span>
+                     <span class="def">to make to follow, send with</span>
                   </span>
                </span>
             </div>
@@ -573,7 +687,9 @@
       </p>
       <footer>
          <div>
-            <p>Vocabulary from open source <a href="https://github.com/gcelano/LemmatizedAncientGreekXML/tree/master/texts">XML on Github</a>
+            <p>Lexicon from <a href="https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0012.tlg001.perseus-grc2/?">perseus.org</a>
+            </p>
+            <p>With morphology from open source <a href="https://github.com/gcelano/LemmatizedAncientGreekXML/tree/master/texts">XML on Github</a>
             </p>
             <p>Thanks to G Celano and upstream providers</p>
             <p class="no_print">Please <a href="https://github.com/wendellpiez/raventracks/issues/">report any problems or discoveries</a>
