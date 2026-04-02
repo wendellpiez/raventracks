@@ -15,6 +15,8 @@ footer > div:last-child { text-align: right; width: fit-content }
 
 details.vocab { border: medium double grey !important }
 
+details.scrolling summary { display: none }
+details.scrolling:not(:open) { display: none }
 details.vocab:not(:open) { display: none }
 details.vocab a { display: none }
 
@@ -24,7 +26,7 @@ details.vocab a { display: none }
 
 html, body { font-family: Alegreya; background-color: white }
 
-.hideTranslation .def { display: none }
+.hideTranslation .def, .hideTranslation .trot { display: none }
 
 /*  main.crib {
  display: flex; flex-direction: column; flex-wrap: wrap; max-height: 90vh
@@ -34,9 +36,10 @@ main.crib { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.2em }
   
 main.crib > * { flex: 0 0 fit-content; }
 
-header { display: flex; gap: 2em }
-header * { margin: 0em; align-content: end; vertical-align: text-bottom }
+header.running { display: flex; gap: 2em }
+header.running * { margin: 0em; align-content: end; vertical-align: text-bottom }
  
+
 nav, nav .linkbox { display: flex }
 
 #translationSwitch { float: right }
@@ -59,6 +62,9 @@ nav a[target] { font-style: italic }
 a { text-decoration: none }
 a:hover { text-decoration: underline }
 
+a.boxed { display: inline-block; padding: 0.2em; outline: thin solid black; background: whitesmoke;
+  font-size: 90%; font-weight: normal; font-style: italic; margin-left: 1em }
+
 footer { font-size: 90%; text-align: center; margin: 1em auto; width: 100% }
 footer * { margin: 0em }
 
@@ -71,6 +77,15 @@ main.squib div *:first-child { margin-top: 0em }
 div.panel { width: 32% }
 
 main.squib-index, main.crib-index { display: block }
+
+main.scroll details[open] summary { color: gainsboro }
+
+/* div.scrollPanel { display: grid; grid-template-columns: 13fr 8fr } */
+div.scrollPanel { width: 100% }
+div.scrollPanel .source{ }
+div.scrollPanel  .trot { width: 38%; float: right }
+
+.trot > *:first-child { margin-top: 0em }
 
 p.squib, p.crib { display: inline-block; margin: 0.2em;
   border: thin solid black; min-width: 4em;
@@ -108,7 +123,9 @@ p.vocab .lemma { display: flex; flex-direction: column }
 
 .transcription { font-size: 120%; width: 68%; orphans: 3; widows: 3 }
 
-.murray1924_translation { border-left: thin solid black; padding-left: 1em }
+.scrollPanel .source { font-size: 120%; orphans: 3; widows: 3 }
+
+.murray1924_translation, .scrollPanel .trot { border-left: thin solid black; padding-left: 1em }
 .murray1924_translation h4 { text-align: right; margin: 0em }
 
 .line { padding-left: 4em; text-indent: -5em }
