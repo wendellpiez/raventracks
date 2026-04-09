@@ -12,6 +12,12 @@ footer { display: grid; grid-template-columns: 1fr 1fr min-content;
          width: 100vw; font-size: 80% !important }
 footer > div:first-child { text-align: left }
 footer > div:last-child { text-align: right; width: fit-content }
+  
+main.crib { display: grid  !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.2em }
+  
+main.crib > * { flex: 0 0 fit-content; }
 
 details.vocab { border: medium double grey !important }
 
@@ -28,13 +34,9 @@ html, body { font-family: Alegreya; background-color: white }
 
 .hideTranslation .def, .hideTranslation .trot { display: none }
 
-/*  main.crib {
+  main.crib {
  display: flex; flex-direction: column; flex-wrap: wrap; max-height: 90vh
-  }  */
-  
-main.crib { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.2em }
-  
-main.crib > * { flex: 0 0 fit-content; }
+  }
 
 header.running { display: flex; gap: 2em }
 header.running * { margin: 0em; align-content: end; vertical-align: text-bottom }
