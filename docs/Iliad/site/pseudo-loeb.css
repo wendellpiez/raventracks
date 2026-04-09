@@ -13,13 +13,12 @@ footer { display: grid; grid-template-columns: 1fr 1fr min-content;
 footer > div:first-child { text-align: left }
 footer > div:last-child { text-align: right; width: fit-content }
   
-main.crib { display: grid  !important;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.2em }
-  
-main.crib > * { flex: 0 0 fit-content; }
+main.crib { flex-direction: row !important }
+main.crib details.vocab { width: 20em }
 
-details.vocab { border: medium double grey !important }
+/*  main.crib > * { flex: 0 0 fit-content }  */
+ 
+details.vocab { outline: medium double grey !important }
 
 details.scrolling summary { display: none }
 details.scrolling:not(:open) { display: none }
@@ -34,7 +33,7 @@ html, body { font-family: Alegreya; background-color: white }
 
 .hideTranslation .def, .hideTranslation .trot { display: none }
 
-  main.crib {
+main.crib {
  display: flex; flex-direction: column; flex-wrap: wrap; max-height: 90vh
   }
 
@@ -50,11 +49,11 @@ nav, nav .linkbox { display: flex }
 nav { position: fixed; right: 0.8rem; font-family: sans-serif; font-size: smaller;
   background-color: white; outline: thin outset black; padding: 0.2em }
 
-aside.print_head { text-align: right; margin: 1.2em 0em 1.2em auto; padding: 0.3em; border:thin solid black;
+aside.print_head { text-align: right; margin: 1.2em 0em 1.2em auto; padding: 0.3em; outline:thin solid black;
   font-size: smaller; font-family: sans-serif; max-width: fit-content }
 
 nav .linkbox
-  { padding: 0.3em; border:thin solid black; margin: 0em 0.2em; background-color: white; align-items: center }
+  { padding: 0.3em; outline:thin solid black; margin: 0em 0.2em; background-color: white; align-items: center }
 
 nav button { margin: 0em 0.1em }
 
@@ -91,34 +90,34 @@ div.scrollPanel  .trot { width: 38%; float: right }
 .trot > *:first-child { margin-top: 0em }
 
 p.squib, p.crib { display: inline-block; margin: 0.2em;
-  border: thin solid black; min-width: 4em;
+  outline: thin solid black; min-width: 4em;
   background-color: whitesmoke;
   padding: 0.2em;
   text-align: center; }
 
-.vocab { margin: 0.2em 0.2em 0em 0em; border: thin dashed grey;
-  background-color: white; padding: 0.6em; }
+.vocab { margin: 0.2em 0.2em 0em 0em; outline: thin dashed grey;
+  background-color: white; padding: 0.6em }
 
-.vocab.verb { border: medium double grey }
-.vocab.noun { border: thin solid grey }
+.vocab.verb { outline: medium double grey }
+.vocab.noun { outline: thin solid grey }
 
 p.line_no { float: right; clear: both; margin: 0em 0em 0em 0.4em; }
 
 .ana { display: grid;
-       grid-template-columns: 1fr 2fr }
+       grid-template-columns: 8em 1fr }
 
 .quiz .tablet { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.2em }
 
 .quiz .tablet .forms, .quiz .tablet .roots, .quiz .tablet .readings { display: flex; flex-direction: column }
 
 .forms div.f, .roots div, .readings div { padding: 0.2em; outline: thin solid black } 
-p.vocab .lemmata { display: flex; flex-direction: column;
-  margin-right: 0.4em }
+.vocab .lemmata { display: flex; flex-direction: column;
+  margin-right: 0.4em; max-width: fit-content }
   
-p.vocab .lemma { display: flex; flex-direction: column }
+.vocab .lemma { display: flex; flex-direction: column }
 
 .lemma { padding: 0.2em; display: inline-flex;
-  flex-direction: column; border: thin inset black;
+  flex-direction: column; outline: thin inset black;
   margin-bottom: 0.4em }
 
 .form { font-size: 105%; font-weight: bold }
