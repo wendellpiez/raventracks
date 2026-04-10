@@ -13,8 +13,6 @@ footer { display: grid; grid-template-columns: 1fr 1fr min-content;
 footer > div:first-child { text-align: left }
 footer > div:last-child { text-align: right; width: fit-content }
   
-main.crib { flex-direction: row !important }
-main.crib details.vocab { width: 20em }
 
 /*  main.crib > * { flex: 0 0 fit-content }  */
  
@@ -31,20 +29,13 @@ details.vocab a { display: none }
 
 html, body { font-family: Alegreya; background-color: white }
 
-.hideTranslation .def, .hideTranslation .trot { display: none }
-
-main.crib {
- display: flex; flex-direction: column; flex-wrap: wrap; max-height: 90vh
-  }
-
-header.running { display: flex; gap: 2em }
-header.running * { margin: 0em; align-content: end; vertical-align: text-bottom }
- 
-header * { margin: 0em }
+html:has(.crib), body:has(.crib) { background-color: gainsboro }
 
 nav, nav .linkbox { display: flex }
 
 #translationSwitch { float: right }
+
+.hideTranslation .def, .hideTranslation .trot { display: none }
 
 nav { position: fixed; right: 0.8rem; font-family: sans-serif; font-size: smaller;
   background-color: white; outline: thin outset black; padding: 0.2em }
@@ -68,13 +59,16 @@ a.boxed { display: inline-block; padding: 0.2em; outline: thin solid black; back
   font-size: 90%; font-weight: normal; font-style: italic; margin-left: 1em }
 
 footer { font-size: 90%; text-align: center; margin: 1em auto; width: 100% }
-footer * { margin: 0em }
+header *, footer * { margin: 0em }
 
 main { margin: 1em 0em }
 main.squib { display: flex }
 
 main.squib > div { align-content: start; height: fit-content }
 main.squib div *:first-child { margin-top: 0em }
+
+main.crib { display: flex; flex-wrap: wrap; align-items: stretch }
+main.crib details.vocab { flex-grow: 0; }
 
 div.panel { width: 32% }
 
@@ -96,7 +90,8 @@ p.squib, p.crib { display: inline-block; margin: 0.2em;
   text-align: center; }
 
 .vocab { margin: 0.2em 0.2em 0em 0em; outline: thin dashed grey;
-  background-color: white; padding: 0.6em }
+  padding: 0.6em }
+.vocab[open] { background-color: whitesmoke }
 
 .vocab.verb { outline: medium double grey }
 .vocab.noun { outline: thin solid grey }
