@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+      <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+      <link rel="icon" href="../tracks.svg" type="image/svg+xml">
+      <style type="text/css" xml:space="preserve">html, body { background-color: cornsilk; font-family: "Gentium Plus", serif; font-size: 14pt } main { overflow: auto; padding: 0.6em; margin: 1em 2vw; line-height: 160%; clear: both; background-color: floralwhite; border: thin outset black } header * { margin: 0em } header .intro p { margin-top: 1em } footer * { margin: 0em } nav, a { font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; } nav { margin: 0em 2vw; float: right; } aside.float { float: right; margin: 0em 2vw 1em 2vw; } aside.float summary { text-align: right; font-size: 120%; font-style: italic } .toc-block { margin-top: 0.6em; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center } a { text-decoration: none; color: purple } a.toc { font-size: 90%; background-color: floralwhite; padding: 0.3em; border: thin solid black; color: inherit } a:hover { text-decoration: underline } summary.head { font-size: 120%; font-weight: bold } .intro { margin: 1em auto; max-width: 40em } details.div { margin-top: 0.8em } details.div:first-child { margin-top: 0em } div.lg { margin: 1em } p.l { padding-left: 2em; text-indent: -2em; margin: 0em } .board { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2vw; margin-top: 0.6em } .board div.reading, .board div.paratext { padding: 0.6em; background-color: antiquewhite; border: thin outset darkgrey; } .board *:first-child { margin-top: 0em } .board *:last-child { margin-bottom: 0em } .board .glosses { font-size: 84%; background-color: inherit; border: thin dotted black; border-right: none; padding-left: 0.62em; } .gloss { padding: 0.4em; outline: thin solid black; background-color: whitesmoke; line-height: 135% } .gloss *:last-child { margin-bottom: 0em } .interp { font-style: italic } .flag { background-color: beige; padding: 0.1em; outline: thin solid tan; border-radius: 0.25em } .header { margin-top: 0em } .header .seg, .header .from, .header .to { font-weight: bold } .paratext { color: darkslategray } .header span.to:before { content: ' … ' } .header span.interp:before { content: ' — ' } span.match:hover { text-decoration: medium underline } .unmatched .header { color: red; font-weight: bold } /* whee! */ /* .reading span:hover { background-color: rgba(255, 127, 127, 0.145) } */ .paratext .epiphainetai { color: black } .gloss.epiphainetai, .match.epiphainetai { background-color: rgba(127, 127, 255, 0.145) } .source.epiphainetai { background-color: rgba(255, 0, 0, 0.145) } .remark.epiphainetai { background-color: rgba(0, 0, 255, 0.145) } .epiphainetai .flag { background-color: inherit } .seg ~ .seg:before { content: ' | '; } .dramatic { div.paratext { color: transparent; background-color: darkslategrey } div.paratext:has(.epiphainetai) { background-color: darkred } .paratext .epiphainetai { color: whitesmoke } .remark.epiphainetai { background-color: inherit } .flag { background-color: inherit; outline: none; padding: 0em } .flag:hover { outline: thin dotted black; background-color: ivory } .remark.epiphainetai .flag { background-color: inherit; padding: 0.1em; outline: thin solid rosybrown; border-radius: 0.25em } }</style><script type="text/javascript" xml:space="preserve">
+
+
+// toggles the class in and out on matching ranges
+function switching(rangeID) {
+  [ ...document.getElementsByClassName(rangeID) ].forEach(
+    (range) => { range.classList.toggle('epiphainetai') } )
+}
+
+function glossSync(detailing,rangeID) {
+  detailing.closest('details').open ? 
+  [ ...document.getElementsByClassName(rangeID) ].forEach(
+    (range) => { range.classList.add('epiphainetai') } )
+  :
+  [ ...document.getElementsByClassName(rangeID) ].forEach(
+    (range) => { range.classList.remove('epiphainetai') } );
+
+}
+
+
+function positionGloss(gloss,rangeID) {
+  rangeID = gloss.getAttribute('data-range-id');
+  target  = document.querySelector('.match.' + rangeID);
+  reach   = ( gloss.previousElementSibling ?
+                gloss.previousElementSibling.getBoundingClientRect().bottom :
+                gloss.parentNode.getBoundingClientRect().top );
+  drop    = Math.max( (target.getBoundingClientRect().top - reach), 0 ); 
+  gloss.style.marginTop = drop + 'px';
+}
+  
+function spreadGlosses() {
+ [ ...document.getElementsByClassName('gloss') ].forEach(
+   (gloss) => { positionGloss(gloss) } );
+}
+
+window.onresize = function() { spreadGlosses() }
+window.onload   = function() { spreadGlosses() }
+
+      </script></head>
+   <body>
+      <nav>Scholia 2026 — <a href="https://raventracks.org">raventracks.org</a></nav>
+      <header>
+         
+         <h1>Platonic Markup: Semantic Markup in Antiquity</h1>
+         
+         <h2>An excerpt from the <i>Life of Plato</i> of Diogenes Laertius</h2>
+         
+         <p>(<b>Vitae Philosophorum</b>, Book III sections 65-66)</p>
+         
+         <section class="intro">
+            
+            <p>Most of what we know about early antiquity comes from late antiquity. Diogenes Laertius
+               was a scholar and biographer who wrote in the 3rd Century CE (we think). This would
+               have been further from Plato's time as we are from Shakespeare. Accordingly what we
+               learn is a mix mainly of received knowledge, rumors and whatever stories had accumulated.</p>
+            
+            <p>An exception might be some remarks he offers on methodology. This comes in the context
+               of a review the topics and arrangement of Plato's works, providing insight into the
+               Platonic canon as it was known in his time. Before giving an extensive summary of
+               doctrine, the antiquarian directs his attention briefly to conventions of editorial
+               markup that had been developed by scholars, curators and custodians of the manuscripts.</p>
+            <!--<p>Even if these editions had limited circulation, they raise questions. The most glaring one, maybe, is who do we think we can trust? We grow skeptical of the fidelity of the texts we do have (in view of the opportunities for mayhem); but the more important point is that integrity of textual transmission was never taken perfectly for granted.</p>
+            <p>Yet at the same time it is possible that (already) by the time Diogenes L was writing, the works of Plato were more often and more widely read about, than they were actually read.</p>
+-->          </section>
+         </header>
+      <main class="body">
+         <div>
+            <button onclick="document.body.className = 'sedate'">Sedate</button>
+            <button onclick="document.body.className = 'dramatic'">Dramatic</button>
+            <button onclick="[ ...document.getElementsByClassName('epiphainetai') ].forEach( (range) =&gt; { range.classList.remove('epiphainetai'); ( range.open ? range.open = false : null ); } )">Clear</button>
+            </div>
+         <div class="div">
+            <div class="div">
+               <div id="B" class="board">
+                  <div class="paratext">
+                     <p class="p">  <span data-range-id="R_sc_1" id="remark_sc_1" class="remark R_sc_1" onclick="switching('R_sc_1')">Certain kinds of semantic markup are applied to his works: take note of the following.</span>  <span data-range-id="R_sc_2" id="remark_sc_2" class="remark R_sc_2" onclick="switching('R_sc_2')">A Chi (Χ) is taken for terms, rhetorical tropes and characteristically <q class="soCalled">Platonic</q> usage.</span>   <span data-range-id="R_sc_3" id="remark_sc_3" class="remark R_sc_3" onclick="switching('R_sc_3')">A wedge (&gt;) for Plato's teachings and doctrines.</span>  <span data-range-id="R_sc_4" id="remark_sc_4" class="remark R_sc_4" onclick="switching('R_sc_4')">A Chi with dots around (፠) for selections and prose specimens.</span>   <span data-range-id="R_sc_5" id="remark_sc_5" class="remark R_sc_5" onclick="switching('R_sc_5')">A wedge with dots (⸖) for proposed corrections.</span>   <span data-range-id="R_sc_6" id="remark_sc_6" class="remark R_sc_6" onclick="switching('R_sc_6')">A <span title="obelos" class="flag">long dash</span> with dots (⸓) for passages rejected for any reason.</span>   <span data-range-id="R_sc_7" id="remark_sc_7" class="remark R_sc_7" onclick="switching('R_sc_7')">A dotted <span title="antisigma" class="flag">reverse letter C</span> (Ͽ) for duplicated or transposed text.</span>  <span data-range-id="R_sc_8" id="remark_sc_8" class="remark R_sc_8" onclick="switching('R_sc_8')">A lightning bolt (☇) for a philosophical school.</span>  <span data-range-id="R_sc_9" id="remark_sc_9" class="remark R_sc_9" onclick="switching('R_sc_9')">A <span title="asterisk" class="flag">star-mark</span> (*) for doctrinal agreement.</span>  <span data-range-id="R_sc_10" id="remark_sc_10" class="remark R_sc_10" onclick="switching('R_sc_10')">A <span title="obelos" class="flag">long dash</span> (—) for a rejection.</span>   <span data-range-id="R_sc_11" id="remark_sc_11" class="remark R_sc_11" onclick="switching('R_sc_11')">The signs are these, and the books, so many.</span>   <span data-range-id="R_sc_12" id="remark_sc_12" class="remark R_sc_12" onclick="switching('R_sc_12')">In his work on Zeno, Antigonus of Carystus says when they were first made available,
+                           if anyone wished to consult these, they paid a fee to the proprietors.</span> </p>
+                  </div>
+                  <div n="V" class="reading">
+                     <p class="p">  <span data-range-id="R_sc_1" id="source_sc_1" class="source R_sc_1" onclick="switching('R_sc_1')">Ἐπεὶ δὲ καὶ <span title="some (kind of) signs (semeia)" class="flag">σημεῖά τινα</span> <span title="his books" class="flag">τοῖς βιβλίοις αὐτοῦ</span> παρατίθενται, <span data-range-id="R_entry_1" class="match R_entry_1" onclick="switching('R_entry_1')">φέρε καὶ περὶ τούτων τι εἴπωμεν</span>.</span>  <span data-range-id="R_sc_2" id="source_sc_2" class="source R_sc_2" onclick="switching('R_sc_2')">Χῖ λαμβάνεται πρὸς τὰς λέξεις καὶ <span data-range-id="R_entry_2" class="match R_entry_2" onclick="switching('R_entry_2')"><span title="schemas" class="flag">τὰ σχήματα</span></span> καὶ ὅλως <span data-range-id="R_entry_3" class="match R_entry_3" onclick="switching('R_entry_3')">τὴν Πλατωνικὴν <span title="synetheia: practice" class="flag">συνήθειαν</span></span>·</span>   <span data-range-id="R_sc_3" id="source_sc_3" class="source R_sc_3" onclick="switching('R_sc_3')">διπλῆ πρὸς τὰ δόγματα καὶ τὰ ἀρέσκοντα Πλάτωνι·</span>  <span data-range-id="R_sc_4" id="source_sc_4" class="source R_sc_4" onclick="switching('R_sc_4')"><span data-range-id="R_entry_4" class="match R_entry_4" onclick="switching('R_entry_4')">Χῖ <span title="circumpunctuated" class="flag">περιεστιγμένον</span></span> πρὸς τὰς ἐκλογὰς καὶ <span data-range-id="R_entry_5" class="match R_entry_5" onclick="switching('R_entry_5')"><span title="nice writings" class="flag">καλλιγραφίας</span></span>·</span>   <span data-range-id="R_sc_5" id="source_sc_5" class="source R_sc_5" onclick="switching('R_sc_5')"><span data-range-id="R_entry_6" class="match R_entry_6" onclick="switching('R_entry_6')">διπλῆ περιεστιγμένη</span> πρὸς <span data-range-id="R_entry_7" class="match R_entry_7" onclick="switching('R_entry_7')">τὰς ἐνίων διορθώσεις</span>·</span>   <span data-range-id="R_sc_6" id="source_sc_6" class="source R_sc_6" onclick="switching('R_sc_6')"><span title="dotted stroke" class="flag"><span data-range-id="R_entry_10" class="match R_entry_10" onclick="switching('R_entry_10')">ὀβελὸς</span> περιεστιγμένος</span> πρὸς τὰς <span data-range-id="R_entry_8" class="match R_entry_8" onclick="switching('R_entry_8')"><span title="purposeless, random" class="flag">εἰκαίους</span> <span data-range-id="R_entry_11" class="match R_entry_11" onclick="switching('R_entry_11')"><span title="annulments, rejections" class="flag">ἀθετήσεις</span></span></span>·</span>   <span data-range-id="R_sc_7" id="source_sc_7" class="source R_sc_7" onclick="switching('R_sc_7')"><span data-range-id="R_entry_9" class="match R_entry_9" onclick="switching('R_entry_9')"><span title="reverse (semi-lunate) sigma (C)" class="flag">ἀντίσιγμα</span> περιεστιγμένον</span> πρὸς τὰς διττὰς χρήσεις καὶ μεταθέσεις τῶν γραφῶν·</span>  <span data-range-id="R_sc_8" id="source_sc_8" class="source R_sc_8" onclick="switching('R_sc_8')">κεραύνιον πρὸς τὴν ἀγωγὴν τῆς φιλοσοφίας·</span>  <span data-range-id="R_sc_9" id="source_sc_9" class="source R_sc_9" onclick="switching('R_sc_9')"><span title="asterisk" class="flag">ἀστερίσκος</span> πρὸς τὴν συμφωνίαν τῶν δογμάτων·</span>  <span data-range-id="R_sc_10" id="source_sc_10" class="source R_sc_10" onclick="switching('R_sc_10')"><span data-range-id="R_entry_10" class="match R_entry_10" onclick="switching('R_entry_10')"><span title="skewer" class="flag">ὀβελὸς</span></span> πρὸς τὴν <span data-range-id="R_entry_11" class="match R_entry_11" onclick="switching('R_entry_11')">ἀθέτησιν</span>.</span>   <span data-range-id="R_sc_11" id="source_sc_11" class="source R_sc_11" onclick="switching('R_sc_11')">τὰ μὲν σημεῖα ταῦτα καὶ <span data-range-id="R_entry_12" class="match R_entry_12" onclick="switching('R_entry_12')">τὰ βιβλία τοσαῦτα</span>·</span>   <span data-range-id="R_sc_12" id="source_sc_12" class="source R_sc_12" onclick="switching('R_sc_12')">ἅπερ Ἀντίγονός φησιν ὁ Καρύστιος ἐν τῷ Περὶ Ζήνωνος νεωστὶ ἐκδοθέντα εἴ τις ἤθελε
+                           διαναγνῶναι, <span title="compensation, rent" class="flag">μισθὸν</span> ἐτέλει τοῖς κεκτημένοις.</span> </p>
+                  </div>
+                  <div class="glosses">
+                     <div data-range-id="R_entry_1" id="entry_1" class="gloss R_entry_1" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <p class="header"><span data-range-id="R_entry_1" class="span R_entry_1" onclick="switching('R_entry_1')"><span class="from">φέρε</span><span class="to">τι εἴπωμεν</span><span class="interp">bear (in mind) also what we say about them</span></span></p>
+                     </div>
+                     <details data-range-id="R_entry_2" id="entry_2" class="gloss R_entry_2" ontoggle="glossSync(this,'R_entry_2')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_2" class="span R_entry_2"><span class="seg">τὰ σχήματα</span><span class="interp">shapings</span></span></summary>
+                        <div class="note">
+                           <p class="p">Grammatical forms, tropes and figures, prosodic features and patterns in general might
+                              be encompassed.</p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_3" id="entry_3" class="gloss R_entry_3" ontoggle="glossSync(this,'R_entry_3')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_3" class="span R_entry_3"><span class="seg">τὴν Πλατωνικὴν συνήθειαν</span></span></summary>
+                        <div class="note">
+                           <p class="p">In singular, <q class="soCalled">Platonic custom</q>, with ὅλως offering the sense of <q class="q">entirely customary</q> (for Plato in particular).</p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_4" id="entry_4" class="gloss R_entry_4" ontoggle="glossSync(this,'R_entry_4')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_4" class="span R_entry_4"><span class="seg">Χῖ περιεστιγμένον</span></span></summary>
+                        <div class="note">
+                           <p class="p">In Unicode (2026), the closest thing appears to be ETHIOPIC SECTION MARK (U+1360).</p>
+                        </div>
+                     </details>
+                     <div data-range-id="R_entry_5" id="entry_5" class="gloss R_entry_5" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <p class="header"><span data-range-id="R_entry_5" class="span R_entry_5" onclick="switching('R_entry_5')"><span class="seg">καλλιγραφίας</span><span class="interp">Fine writings; set pieces</span></span></p>
+                     </div>
+                     <details data-range-id="R_entry_6" id="entry_6" class="gloss R_entry_6" ontoggle="glossSync(this,'R_entry_6')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_6" class="span R_entry_6"><span class="seg">διπλῆ περιεστιγμένη</span></span></summary>
+                        <div class="note">
+                           <p class="p">For the dotted diplê, we have DOTTED RIGHT-POINTING ANGLE (U+2E16).</p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_7" id="entry_7" class="gloss R_entry_7" ontoggle="glossSync(this,'R_entry_7')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_7" class="span R_entry_7"><span class="seg">τὰς ἐνίων διορθώσεις</span><span class="interp">Rectifications <q class="q">of some</q></span></span></summary>
+                        <div class="note">
+                           <p class="p">Possibly the idea is that a diorthosis or <q class="soCalled">straightening</q> does not have to be accepted by everyone (παντῶν) but only by some (ἐνίων) to be
+                              marked as such?</p>
+                        </div>
+                     </details>
+                     <div data-range-id="R_entry_8" id="entry_8" class="gloss R_entry_8" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <p class="header"><span data-range-id="R_entry_8" class="span R_entry_8" onclick="switching('R_entry_8')"><span class="seg">εἰκαίους ἀθετήσεις</span><span class="interp">set-asides for whatever reason</span></span></p>
+                     </div>
+                     <details data-range-id="R_entry_9" id="entry_9" class="gloss R_entry_9" ontoggle="glossSync(this,'R_entry_9')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_9" class="span R_entry_9"><span class="seg">ἀντίσιγμα περιεστιγμένον</span></span></summary>
+                        <div class="note">
+                           <p class="p">A dotted antisigma. The <q class="soCalled">semi-lunate sigma</q> (half-moon sigma) of the 2nd Century CE resembles a Latin capital C. No meaning is
+                              suggested for an undotted sigma.</p>
+                           <p class="p">Since we don't know which margin (if only one) was used for the markup, and thus do
+                              not know which way the Ͻ (or C) was oriented with respect to the the text. </p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_10" id="entry_10" class="gloss R_entry_10" ontoggle="glossSync(this,'R_entry_10')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_10" class="span R_entry_10"><span class="seg">ὀβελὸς</span></span></summary>
+                        <div class="note">
+                           <p class="p">An obelos, in Homer, is a skewer or spit (for grilling meat). We are assured by modern
+                              lexicographers that we should construe a horizontal line or long dash, not a bar,
+                              pipe or solidus.</p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_11" id="entry_11" class="gloss R_entry_11" ontoggle="glossSync(this,'R_entry_11')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_11" class="span R_entry_11"><span class="seg">ἀθετήσεις</span><span class="seg">ἀθέτησιν</span></span></summary>
+                        <div class="note">
+                           <p class="p">A passage can be marked for omission (<q class="soCalled">set aside</q>) with an obelos, either dotted and undotted. ἄθετος is <q class="soCalled">without place</q>, hence ἀθετέω <q class="soCalled">put aside</q> or <q class="soCalled">reject</q>; so an ἀθέτησις (athetesis) is a rejection, marking something for the next reader
+                              or copyist to skip over or omit. Maybe dotting an obelos was a way of corroborating
+                              and emphasizing the judgement of a prior editor.</p>
+                           <p class="p">Similarly, the distinction between Chi (X) and dotted Chi (፠) seems to be a distinction
+                              between n <q class="q">noteworthy</q> (Chi) and an actual callout or marked specimen (dotted Chi).</p>
+                           <p class="p">If these distinctions are not too fine, the clear implication is that the dots comprise
+                              a kind of meta-markup, like adding an attribute to an element in XML. Against this,
+                              the commentator offers no meaning for an undotted reverse C (<q class="soCalled">half-moon sigma</q>), znd the difference between the dotted and undotted wedge seems to be that dots
+                              indicate a correction has been made (and is marked as <q class="soCalled">proposed</q>).</p>
+                        </div>
+                     </details>
+                     <details data-range-id="R_entry_12" id="entry_12" class="gloss R_entry_12" ontoggle="glossSync(this,'R_entry_12')" onclick="[ ...this.closest('div.glosses').children ].forEach( (g) =&gt; { positionGloss(g) } )">
+                        <summary class="header"><span data-range-id="R_entry_12" class="span R_entry_12"><span class="seg">τὰ βιβλία τοσαῦτα</span></span></summary>
+                        <div class="note">
+                           <p class="p">The sections directly prior to this one contain a review of the writings of Plato
+                              then extant, to which this passage serves as a conclusion.</p>
+                        </div>
+                     </details>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer style="margin: 2em auto; border-top: thin solid black; padding-top:1em; text-align:center; max-width:60vw">
+         
+         <h4><i>Life of Plato</i> (excerpt)</h4>
+         
+         <p>Diogenes Laertius</p>
+         
+         <p>Scholia 2026 translation with glosses</p>
+         
+         <p>By Wendell Piez</p>
+         
+         <p>A <a href="https://raventracks.org">raventracks.org</a> project</p>
+         
+         <p><a href="https://github.com/wendellpiez/raventracks">Corrections are welcome</a>
+            
+            </p><a href="https://raventracks.org" id="raventracks_home"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135" height="135" id="raven-tracks">
+               
+               
+               <defs>
+                  
+                  
+                  <g id="background">
+                     
+                     <rect width="100%" height="100%" fill="none" stroke="slategrey" stroke-opacity="1" stroke-width="5"/>
+                     </g>
+                  
+                  
+                  <marker id="Talon" markerWidth="3" markerHeight="1" refX="0" refY="0.5" orient="auto">
+                     
+                     <path stroke-width="0.1" style="fill:midnightblue; fill-opacity:0.6; stroke-opacity:0.3;              stroke:black; stroke-linejoin:miter" d="M 2.5 0.5 C 0 1.5 0 -0.5 2.5 0.5 z"/>
+                     </marker>
+                  
+                  
+                  <g id="leftclaw" stroke="black" fill="none" stroke-opacity="0.6" marker-end="url(#Talon)" stroke-dasharray="6 15" stroke-linecap="round">
+                     
+                     <path d="M 0 15 l 5 75" stroke-width="16"/>
+                     
+                     
+                     <path d="M 0 0 l 0 -75" stroke-width="16"/>
+                     
+                     
+                     <path d="M -12 5 l -40 -50" stroke-width="14"/>
+                     
+                     
+                     <path d="M 12 5 l 40 -50" stroke-width="14"/>
+                     </g>
+                  
+                  
+                  <g id="rightclaw" stroke="black" fill="none" stroke-opacity="0.6" marker-end="url(#Talon)" stroke-dasharray="6 15" stroke-linecap="round">
+                     
+                     <path d="M 0 15 l -5 75" stroke-width="16"/>
+                     
+                     
+                     <path d="M 0 0 l 0 -75" stroke-width="16"/>
+                     
+                     
+                     <path d="M -12 5 l -40 -50" stroke-width="14"/>
+                     
+                     
+                     <path d="M 12 5 l 40 -50" stroke-width="14"/>
+                     </g>
+                  
+                  </defs>
+               
+               
+               
+               <use xlink:href="#leftclaw" transform="translate(40 58) scale(0.45)"/>
+               
+               
+               <use xlink:href="#rightclaw" transform="translate(105 67) scale(0.45)  rotate(-12)"/>
+               
+               </svg></a>
+         </footer>
+   </body>
+</html>

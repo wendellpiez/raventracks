@@ -4,10 +4,12 @@
     <title>Raven Tracks</title>
     <style>
 body       { background: linear-gradient(whitesmoke, #36454F);
-             font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
-div.diptych { display: grid; grid-template-columns: 1fr max-content; border-top: thin dotted black }
+             font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, Candara, sans-serif; }
+div.diptych { display: grid; grid-template-columns: 1fr max-content }
 div.links   { display: flex; gap: 1em; justify-content: center; max-width: 60%; margin: 0em auto }
 div.diptych div.links { justify-content: right; margin-right: 0em }
+.dotted { margin-top: 1em; border-top: thin dotted black }
+.dotted summary { margin-top: 1em }
 div.links p { width: fit-content; white-space: nowrap; height: min-content; padding: 0.2em; background-color: silver; outline: medium solid grey; text-align: center }
 div.links p:hover { outline: medium solid black; background: whitesmoke }
 h4:first-child { margin: 0em }
@@ -19,6 +21,7 @@ blockquote { font-size: 120%; max-width: 28em; margin: 0.6em auto }
 a          { color: midnightblue; text-decoration: none }
 a:hover    { text-decoration: underline }
 .float     { float: right; clear: both }
+figure img { outline: thin solid; max-width:100% }
 footer     { border-top: thin solid black;
              padding: 1em; text-align: center; max-width: 80%; margin: 2vh auto }
 footer p, footer h4 { margin: 0em }
@@ -32,7 +35,25 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
     <h1>Raven Tracks</h1>
     <h2>Experiments in Media</h2>
     <main>
-      <details open>
+      <details id="platonic_markup">
+        <summary class="head">Platonic Markup — Diogenes Laertius excerpt</summary>
+        <p><a href="AncientMarkup/PlatonicMarkup.html">Read (in Greek)</a> an excerpt from the <i>Lives of the Philosophers</i> by Diogenes Laertius (ca. 3rd century CE), with parallel English translation.</p>
+        <p>The passage describes the markup or marginal <i>indicia</i> conventionally used by
+          editors of Plato's dialogues, in manuscript copies kept at the
+          Academy in Athens. It was written several centuries after Plato wrote and founded his school, 
+          suggesting development over generations of editorial practice.</p>
+        <div class="links">
+          <p>
+            <a href="AncientMarkup/PlatonicMarkup.html">Scholia&#xA0;2026 Reader</a>
+          </p>
+        </div>
+        
+        <figure>
+          <img src="AncientMarkup/PlatoMS-snapshot.jpg.png" alt="snapshot of a manuscript page of Plato's Republic, 9th Century CE"/>
+          <figcaption><p>A partial view of a 9th-century (CE) manuscript of Plato's <i>Republic</i>, with scholia (marginal notes) as well as ... some form of markup? The image is from <a href="https://commons.wikimedia.org/wiki/File:Politeia_beginning._Codex_Parisinus_graecus_1807.jpg">Wikimedia Commons</a> (public domain).</p></figcaption>
+        </figure>
+      </details>
+      <details id="demonax">
         <summary class="head">Life of Demonax (Lucian of Samosata, Second Century CE)</summary>
         <div class="links">
           <p>
@@ -87,10 +108,53 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
           </details>
         </div>
       </details>
-      <details open>
-        <summary class="head">Homer <i>Scriptorium</i> exercises - <a href="Iliad/squibs/index.html"
-            >ILIAD</a></summary>
-        <div class="diptych">
+      <details id="homer_studies">
+        <summary class="head">Homer Studies  – <i>ILIAD</i></summary>
+        <div class="dotted">
+          <h3>Elucidated Iliad (a reader's helper for Homer)</h3>
+          <div class="links">
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book01.html">Α</a></p> 
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book02.html">Β</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book03.html">Γ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book04.html">Δ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book05.html">Ε</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book06.html">Ζ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book07.html">Η</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book08.html">Θ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book09.html">Κ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book10.html">Ι</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book11.html">Λ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book12.html">Μ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book13.html">Ν</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book14.html">Ξ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book15.html">Ο</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book16.html">Π</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book17.html">Ρ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book18.html">Σ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book19.html">Τ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book20.html">Υ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book21.html">Φ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book22.html">Χ</a></p>
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book23.html">Ψ</a></p>        
+            <p><a href="Iliad/elucidated/Iliad_elucidated-book24.html">Ω</a></p>    
+          </div>
+          
+       <p>For intermediate and advanced students of Homer, this assisted reader provides hints and help with
+          morphology and grammar interactively, on the page. For nouns, verbs and adjectives,
+          selecting the word opens a panel with links to other uses of that word in the epic (up to three).</p>
+          <p>The design goals are to complement more fully featured readers elsewhere with something lightweight,
+            fast and 'low impact' to distribute and run (no installation or registration), while providing enough of the right kind of help to the more experienced Greek scholar to make it worth returning to. Pages
+            are large by yesterday's standards, but are self-contained – no back end, no server – to make
+            them easy to cache, copy, distribute and use off line.</p> 
+        <p>In addition to being interesting as a refresher to Homer, this reader can serve as a basis
+          for drills, exercises or quizzes. Be sure to try hovering as well as clicking, and try "Show Hints" to see extra information displayed.</p>          
+          <p>The source data including treebank (morphological analysis) is gratefully acquired from <a href="https://github.com/PerseusDL">PerseusDL</a>
+            under <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" style="white-space: nowrap">CC-BY-SA</a>.</p>
+        </div>
+        
+        <div id="homer_scriptorium">
+        <h2>Homer Scriptorium</h2>
+        <div class="diptych dotted">
         <h3>Squibs (<i>extracta scribenda</i>)</h3>
         <div class="links">
           <p>
@@ -104,7 +168,7 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
           </p>
         </div>
           </div>
-        <div class="diptych">
+          <div class="diptych dotted">
           <h3>Cribs (running vocabularies, segmented)</h3>
         <div class="links">
           <p>
@@ -131,18 +195,9 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
         <p>Glitches and alignment errors can be corrected: please feel free to <a
             href="https://github.com/wendellpiez/raventracks/issues">report</a>.</p>
         <details>
-          <summary>Online <i>Iliad</i></summary>
-          <ul>
-            <li><a href="https://logeion.uchicago.edu/">Logeion</a> at UChicago - awesome resource</li>
-            <li><a href="https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0012.tlg001.perseus-grc2/?page=1">Scaife Greek Vocabulary tool</a> set to the Iliad</li>
-            <li><a href="https://beyond-translation.perseus.org/reader/urn:cts:greekLit:tlg0012.tlg001.msA:1.1-1.25">Book I 1-25</a> in the <b>beyond-translation</b> reader</li>
-            <li><a href="https://homer.library.northwestern.edu/">The Chicago Homer</a> (Kahane, Mueller, Berry, Parod)</li>
-          </ul>
-        </details>
-        <details>
           <summary>How to use the squibs</summary>
           <p>The squibs are designed for an exercise in language and literature study described
-            below, the <a href="#method">Scholia Method</a>. Print one page or many. At fifteen lines a day the entire Iliad can be copied in less than three years.</p>
+            below, the <a href="#method">Scriptorium Method</a>. Print one page or many. At fifteen lines a day the entire Iliad can be copied in less than three years.</p>
           <p>Preview your print job, resetting page size, orientation and scaling options for best
             results. A landscape setting can work well. A <q>scratch pad</q> image in the footer helps
             to prevent crowding on a single page; an unwanted final page can be omitted from
@@ -165,26 +220,38 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
             as the print preview will show. By this means you can limit the print to just the words you want
             to study.</p>
         </details>
+          
         <details>
-          <summary>Scriptorium Method</summary>
+          <summary><b>Scriptorium Technique</b></summary>
           <p>The <a
               href="https://www.alexanderarguelles.com/question-answer/tag/scriptorium/">Scriptorium
-              Method</a> is an approach to language study developed 
+              Technique</a> (or method) is an approach to language study developed 
             by Alexander Arguelles and popularized on line. It is especially well suited to studying
           ancient languages, poetry and literary works in any language.</p>
-          <p>These pages seek to support, arguably unnecessarily, the method with technology. Printed 
-            and electronic aids can reduce the need to turn pages or enter terms into search boxes, 
-            while offering space for whatever notes or glosses are
-            helpful for understanding, retention, and later reference. Squibs and cribs are meant to
-            facilitate this <i>assimilation</i>: before the <q>final</q> transcription (which is only, after all, the
-            latest transcription), the text requires completion, like a
-            coloring book, except using letters, words and language, not shapes and colors. (Or
-            shapes and colors too.)</p>
+            <p>These pages seek to support the method with technology. Properly speaking, this may
+              be unnecessary, but it can be conducive to practice: printed and electronic aids can
+              reduce the need to turn pages or enter terms into search boxes, while offering space
+              for whatever notes or glosses are helpful for understanding, retention, and later
+              reference. Squibs and cribs are meant to facilitate this <i>assimilation</i>: before
+              the <q>final</q> transcription (which is only, after all, the latest transcription),
+              the text requires completion, like a coloring book, except using letters, words and
+              language, not shapes and colors. (Or shapes and colors too.)</p>
           <p>Scholia 2026 is an initiative supporting this and related work in language study such as
             the preparation of assisted readers or desktop-printed micro-editions.</p>
         </details>
+        </div>
+      <details class="dotted">
+        <summary class="head">Interesting online <i>Iliad</i></summary>
+        <ul>
+          <li><a href="https://logeion.uchicago.edu/">Logeion</a> at UChicago - awesome resource</li>
+          <li><a href="https://vocab.perseus.org/word-list/urn:cts:greekLit:tlg0012.tlg001.perseus-grc2/?page=1">Scaife Greek Vocabulary tool</a> set to the Iliad</li>
+          <li><a href="https://beyond-translation.perseus.org/reader/urn:cts:greekLit:tlg0012.tlg001.msA:1.1-1.25">Book I 1-25</a> in the <b>beyond-translation</b> reader</li>
+          <li><a href="https://homer.library.northwestern.edu/">The Chicago Homer</a> (Kahane, Mueller, Berry, Parod)</li>
+        </ul>
+      </details>
         
       </details>
+      
       <section>
         <h3>Also by the developer</h3>
         <ul>
@@ -197,7 +264,8 @@ details summary.head { font-size: 120%; font-weight: bold; margin-bottom: 0.8em 
             </ul>
           </li>
           <li>Print your own <a href="https://github.com/wendellpiez/GreekVocab">Ancient Greek Vocabulary flashcards</a></li>
-          <li><a href="http://wendellpiez.com/">My business home page</a> (due for refurb)</li>
+          <li>All my <a href="https://github.com/wendellpiez/">open source projects on Github</a></li>
+          <li><a href="http://wendellpiez.com/">My business home page</a></li>
         </ul>
       </section>
     </main>
