@@ -8,7 +8,7 @@ This is currently a statically maintained, handmade web site, although many reso
 
 Think of it as like ice sculpture or any other art made using machines.
 
-If you have a response or feedback to offer, please create a Github [Issue](./Issues/) or contact the proprietor directly at w e n d e l l p i e z (at) w a p i e z (dot) c o m .
+If you have a response or feedback to offer, please create a Github [Issue](./Issues/) or contact the proprietor directly at w a p i e z (at) w e n d e l l p i e z (dot) c o m .
 
 See more work:
 
