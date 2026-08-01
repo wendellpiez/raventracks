@@ -23,6 +23,7 @@ details.scrolling:not(:open) { display: none }
 details.vocab:not(:open) { display: none }
 details.vocab a { display: none }
 
+#reverser { display: none }
 }
 
 .print_only { display: none }
@@ -64,12 +65,14 @@ header *, footer * { margin: 0em }
 main { margin: 1em 0em }
 main.squib { display: flex }
 
-main.squib > div { align-content: start; height: fit-content }
+main.squib > div { align-content: start; height: fit-content; padding: 0em 0.3em }
 main.squib div *:first-child { margin-top: 0em }
+
 
 main.crib { display: flex; flex-wrap: wrap; align-items: stretch }
 main.crib details.vocab { flex-grow: 0; }
-
+ 
+ 
 div.panel { width: 32% }
 
 main.squib-index, main.crib-index { display: block }
@@ -78,8 +81,8 @@ main.scroll details[open] summary { color: gainsboro }
 
 /* div.scrollPanel { display: grid; grid-template-columns: 13fr 8fr } */
 div.scrollPanel { width: 100% }
-div.scrollPanel .source{ }
-div.scrollPanel  .trot { width: 38%; float: right }
+div.scrollPanel .source {  }
+div.scrollPanel  .trot { width: 38%; float: right; clear: both }
 
 .trot > *:first-child { margin-top: 0em }
 
@@ -91,7 +94,7 @@ p.squib, p.crib { display: inline-block; margin: 0.2em;
 
 .vocab { margin: 0.2em 0.2em 0em 0em; outline: thin dashed grey;
   padding: 0.6em }
-.vocab[open] { background-color: whitesmoke }
+.vocab[open] { background-color: whitesmoke}
 
 .vocab.verb { outline: medium double grey }
 .vocab.noun { outline: thin solid grey }
@@ -119,6 +122,12 @@ p.line_no { float: right; clear: both; margin: 0em 0em 0em 0.4em; }
 .properties { font-size: 80%; margin-right: 0.4em }
 
 .transcription { font-size: 120%; width: 68%; orphans: 3; widows: 3 }
+
+#reverser { float: right }
+
+.leonardo { transform: scaleX(-1) }
+.leonardo #reverser { transform: scaleX(-1) }
+
 
 .scrollPanel .source { font-size: 120%; orphans: 3; widows: 3 }
 
